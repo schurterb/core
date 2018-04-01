@@ -11,8 +11,8 @@ This class only requires three private methods to be implemented
   initSocket() : void
 """
 
-from base.logging import Logger
-from base.pattern import Observer, Observable
+from core.log import Logger
+from core.pattern import Observer, Observable
 
 import abc
 import socket

@@ -37,25 +37,21 @@ class Logger(object):
         level = self.__getLevel(level)
         logging.RootLogger.setLevel(logging.RootLogger, level=level)
         
-    def critical(self, message, _exception=None, _traceback=None):
+    def critical(self, message, _exception=None):
         if message is None:
             return
         if _exception is None:
             self.log.critical(message, extra=self.extras)
         else:
             self.log.critical(message +" :: "+self.formatter.formatException(_exception), extra=self.extras)
-        if _traceback is not None:
-            self.log.debug(_traceback, extra=self.extras)
             
-    def error(self, message, _exception=None, _traceback=None):
+    def error(self, message, _exception=None):
         if message is None:
             return
         if _exception is None:
             self.log.error(message, extra=self.extras)
         else:
             self.log.error(message +" :: "+self.formatter.formatException(_exception), extra=self.extras)
-        if _traceback is not None:
-            self.log.debug(_traceback, extra=self.extras)
                         
     def warn(self, message):
         if message is not None:

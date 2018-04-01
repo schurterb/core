@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PWD=$(pwd)
+
+#Install dependencies
+
+
+#Add project to Anaconda path
+conda develop $PWD/src

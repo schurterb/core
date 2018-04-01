@@ -9,19 +9,22 @@ ensures there is only one of the said object
 """
 
 from .singleton import Singleton
-from base.data import MulticastChannel, Message
-from base.pattern import Observer
+from core.data import MulticastChannel
+from core.pattern import Observer
 
 import threading
+import time
 
 #Distributed Singleton is a distributed object of which there 
 # can only be one on each server and all act as one object
 
 
-class distributedDataUpdate(Message):
+class distributedDataUpdate(type):
     
     def __init__(self, item, value):
-        Message.__init__(self)
+        self.source = None
+        self.destination = None
+        self.timestamp = time.time()
         self.item = item
         self.value = value
 

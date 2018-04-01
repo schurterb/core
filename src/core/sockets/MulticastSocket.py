@@ -7,7 +7,7 @@ Created on Thu May  4 23:19:07 2017
 basic multicast socket
 """
 
-from base.logging import Logger
+from core.log import Logger
 from .BaseSocket import BaseSocket
 
 import socket

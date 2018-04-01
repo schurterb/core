@@ -7,10 +7,10 @@ Created on Thu May 25 21:59:08 2017
 Multicast channel for sending and receiving serialized objects.
 """
 
-from base.logging import Logger
-from base.pattern import Observer, Observable
-from base.serialization import PickleSerializer
-from base.sockets import MulticastSocket
+from core.log import Logger
+from core.pattern import Observer, Observable
+from core.serialization import PickleSerializer
+from core.sockets import MulticastSocket
 
 import threading
 

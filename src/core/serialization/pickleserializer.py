@@ -7,7 +7,7 @@ Created on Thu May  4 20:14:18 2017
 Serialization core class based an Python's Pickle library
 """
 
-from base.logging import Logger
+from core.log import Logger
 import pickle
 
 class PickleSerializer(object):
