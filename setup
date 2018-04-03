@@ -6,4 +6,7 @@ PWD=$(pwd)
 
 
 #Add project to Anaconda path
-conda develop $PWD/src
+conda develop $PWD/src &> /dev/null
+
+#Add project to PYTHONPATH path
+echo 'export PYTHONPATH="${PYTHONPATH}:'$PWD'/src"' >> ~/.bashrc

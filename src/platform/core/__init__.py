@@ -5,9 +5,9 @@ Created on Sun Feb  5 21:56:47 2017
 @author: user
 """
 
-import core.log
-import core.data
-import core.pattern
-import core.serialization
-import core.singleton
-import core.sockets
+import platform.core.log
+import platform.core.data
+import platform.core.pattern
+import platform.core.serialization
+import platform.core.singleton
+import platform.core.sockets
