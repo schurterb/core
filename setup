@@ -3,7 +3,7 @@
 PWD=$(pwd)
 
 #Install dependencies
-
+pip install sh
 
 #Add project to Anaconda path
 conda develop $PWD/src &> /dev/null
