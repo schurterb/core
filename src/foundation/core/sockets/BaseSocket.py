@@ -24,7 +24,7 @@ class BaseSocket(Observer, Observable, metaclass=abc.ABCMeta):
     
     def __init__(self, **kwargs):
         Observable.__init__(self)
-        self.log = Logger("network", "MulticastSocket", "DEBUG")
+        self.log = Logger("network", "BaseSocket", "DEBUG")
         self.writeLock = threading.Lock()
         self.readLock = threading.Lock()
         self.updateLock = threading.Lock()

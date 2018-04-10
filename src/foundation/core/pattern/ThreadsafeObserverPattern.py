@@ -15,7 +15,7 @@ class ThreadsafeObservable():
     isObservable = False
     
     def __init__(self):
-        self.log = Logger("network", "MulticastSocket", "ERROR")
+        self.log = Logger("system", "ThreadsafeObservable", "ERROR")
         self.observers = []
         self.isObservable = True
         self.observerLock = Lock()

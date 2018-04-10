@@ -22,7 +22,7 @@ class Observable():
     isObservable = False
     
     def __init__(self):
-        self.log = Logger("network", "MulticastSocket", "ERROR")
+        self.log = Logger("system", "Observable", "ERROR")
         self.observers = []
         self.isObservable = True
     
