@@ -14,7 +14,7 @@ class Logger(object):
     
     def __init__(self, group, name, level=None, **kwargs):
         FORMAT = '%(asctime)s %(clientip)s %(levelname)s %(name)s : %(message)s'
-        filepath = kwargs.get('logfile', '/var/log/andromeda')
+        filepath = kwargs.get('logfile', 'foundation/log')
         if not filepath.endswith('/'):
             filepath = filepath + '/'
         mkdir('-p',filepath)
@@ -23,7 +23,7 @@ class Logger(object):
             logfile = group+'.log'
             self.log = logging.getLogger(name)
         else:
-            logfile = 'andromeda.log'
+            logfile = 'foundation.log'
             self.log = logging.getLogger()
         self.formatter = logging.Formatter(FORMAT)
         handler = logging.FileHandler(filepath+logfile)
